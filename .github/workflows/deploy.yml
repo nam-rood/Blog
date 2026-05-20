@@ -28,17 +28,14 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: npm install --legacy-peer-deps
 
       - name: Build Astro site
-        run: pnpm astro build
+        run: npx astro build
 
       - name: Run Pagefind
-        run: pnpm pagefind --site dist
+        run: npx pagefind --site dist
         continue-on-error: true
 
       - name: Compress fonts
