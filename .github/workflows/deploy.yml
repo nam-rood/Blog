@@ -30,14 +30,20 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          run_install: false
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Build site
-        run: pnpm run build
+      - name: Build Astro site
+        run: pnpm astro build
+
+      - name: Run Pagefind
+        run: pnpm pagefind --site dist
+        continue-on-error: true
+
+      - name: Compress fonts
+        run: node scripts/compress-fonts.js
+        continue-on-error: true
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
