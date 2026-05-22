@@ -391,6 +391,11 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa7-brands:github",
 			url: "https://github.com/nam-rood",
 		},
+		{
+			name: "QQ",
+			icon: "fa7-brands:qq",
+			url: "https://qm.qq.com/cgi-bin/qm/qr?k=ajAJx5w61Kt99gc3Uw9xmkWJkW5E-wjd",
+		},
 		// {
 		// 	name: "Codeberg",
 		// 	icon: "simple-icons:codeberg",
