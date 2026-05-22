@@ -3,7 +3,6 @@ title: "claude code使用教程"
 published: 2026-01-22
 description: "用了很久的国内AI，最近和同事讨论的时候，我们组内四个人，有两个人都在用claude code，并且他们对此的评价及其高。并且之前在一个中转站内，免费领了20刀的额度，用了一下，给我震撼坏了。"
 draft: false
-sourceLink: "https://www.nam-rood.online/index.php/2026/01/22/claude-code%e4%bd%bf%e7%94%a8%e6%95%99%e7%a8%8b/"
 category: "开发工具"
 tags: [Claude Code, AI 编程, 教程]
 ---

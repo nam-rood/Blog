@@ -30,7 +30,7 @@ export const projectsData: Project[] = [
 		techStack: ["Astro", "TypeScript", "Tailwind CSS", "Svelte"],
 		status: "completed",
 		sourceCode: "https://github.com/nam-rood/Blog",
-		visitUrl: "https://namrood-blog-9xaxsxsdmo.edgeone.cool/",
+		visitUrl: "https://nam-rood.online",
 		startDate: "2024-01-01",
 		endDate: "2024-06-01",
 		featured: true,

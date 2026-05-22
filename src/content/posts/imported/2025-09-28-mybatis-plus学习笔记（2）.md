@@ -3,7 +3,6 @@ title: "Mybatis-Plus学习笔记（2）"
 published: 2025-09-28
 description: "温馨提示：服务层实现的时候，需要让YourService 继承ServiceImpl（因为这个原因，测了两个小时…）"
 draft: false
-sourceLink: "https://www.nam-rood.online/index.php/2025/09/28/mybatis-plus%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%882%ef%bc%89/"
 category: "后端开发"
 tags: [MyBatis-Plus, Java, 持久层]
 ---

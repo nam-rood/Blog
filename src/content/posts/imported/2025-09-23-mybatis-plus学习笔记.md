@@ -3,7 +3,6 @@ title: "Mybatis-Plus学习笔记（1）"
 published: 2025-09-23
 description: "特性"
 draft: false
-sourceLink: "https://www.nam-rood.online/index.php/2025/09/23/mybatis-plus%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0/"
 category: "后端开发"
 tags: [MyBatis-Plus, Java, ORM]
 ---
