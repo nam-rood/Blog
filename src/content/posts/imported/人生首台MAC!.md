@@ -5,6 +5,7 @@ description: "感谢老姐送来的Macbook M5 pro 24G+1T。"
 draft: false
 category: "随笔"
 tags: [闲谈]
+heroImage: "/images/content/2026-5-26.jpg"
 ---
 由于高考结束之后，购买的是台式机。自己身上也没有太多钱，最近实习了半年了，公司使用的是一台iMAC，家里又是一台window的台式机。上下班需要维护两台电脑就很麻烦。然后簇生了买台笔记本的想法。
 
