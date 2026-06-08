@@ -1,8 +1,12 @@
+<div align="center">
+
+<img src="logo.png" width="140" alt="Namrood Blog logo">
+
 # Namrood Blog
 
-<img align="right" src="logo.png" width="180px" alt="Namrood Blog logo">
+A soft, content-first personal blog for technical notes, everyday thoughts, personal interests, and long-running records.
 
-This is Namrood's personal blog project, built to collect technical notes, everyday thoughts, personal interests, and long-running records. It is not maintained as a generic blog template; it is a customized static site for Namrood's own writing and archive.
+[Visit Site](https://nam-rood.online) · [English](./README.md) · [简体中文](./README.zh.md) · [日本語](./README.ja.md) · [繁體中文](./README.tw.md)
 
 [![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)](https://nodejs.org/)
 [![pnpm 11](https://img.shields.io/badge/pnpm-11-blue)](https://pnpm.io/)
@@ -10,18 +14,23 @@ This is Namrood's personal blog project, built to collect technical notes, every
 [![TypeScript 6](https://img.shields.io/badge/TypeScript-6-blue)](https://www.typescriptlang.org/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=apache)](https://opensource.org/licenses/Apache-2.0)
 
-Site: [nam-rood.online](https://nam-rood.online)
-
-README languages:
-[English](./README.md) / [简体中文](./README.zh.md) / [日本語](./README.ja.md) / [繁體中文](./README.tw.md)
-
 ![Namrood Blog Preview](./README.webp)
+
+</div>
 
 ## About this project
 
-This repository powers a personal content site. It keeps programming notes, learning records, life updates, anime lists, diaries, albums, devices, projects, skills, and timeline pages in one place.
+Namrood Blog is a customized static site for Namrood's own writing and archive. It is not maintained as a generic blog template; it collects technical notes, learning records, life updates, anime lists, diaries, albums, devices, projects, skills, and timeline pages in one place.
 
-The site is generated statically with Astro and can be deployed to static hosting platforms such as Vercel, GitHub Pages, Netlify, or Cloudflare Pages. The design is soft and content-first, with the goal of making writing, reading, and revisiting memories feel calm and simple.
+The site is generated with Astro and can be deployed to static hosting platforms such as Vercel, GitHub Pages, Netlify, or Cloudflare Pages. Its design is soft and content-first, with the goal of making writing, reading, and revisiting memories feel calm and simple.
+
+## Highlights
+
+- Personal writing archive for essays, study notes, diaries, albums, and long-term records
+- Static-first Astro site with RSS, sitemap, local search, and basic SEO support
+- Soft visual style focused on calm reading and memory keeping
+- Structured data pages for anime, devices, projects, skills, and personal timelines
+- Multilingual README documentation for English, Simplified Chinese, Japanese, and Traditional Chinese
 
 ## What it contains
 
@@ -55,11 +64,17 @@ src/data/               Structured data for anime, diary, projects, skills, etc.
 public/                 Static assets, images, fonts, and scripts
 scripts/                Content sync, post creation, and build helper scripts
 docs/                   Project maintenance documentation
+tests/                  Test files and validation helpers
 ```
 
 ## Local development
 
-This project uses pnpm for dependency management.
+Requirements:
+
+- Node.js 22 or newer
+- pnpm 11
+
+Install dependencies and start the local development server:
 
 ```bash
 pnpm install
@@ -115,9 +130,11 @@ Production build:
 pnpm build
 ```
 
-The generated site is written to `dist/`. The repository includes Vercel configuration and a GitHub Pages workflow, so deployment can be adapted to the target hosting platform.
+The generated site is written to `dist/`. The build script updates anime data, runs Astro's production build, generates the Pagefind search index, and compresses fonts.
 
-If an external content repository is not used, explicitly disable content sync locally or in CI:
+This repository includes Vercel configuration and a GitHub Pages workflow, so deployment can be adapted to the target hosting platform.
+
+The `predev` and `prebuild` scripts try to run content sync before starting or building. If an external content repository is not used, explicitly disable content sync locally or in CI:
 
 ```bash
 ENABLE_CONTENT_SYNC=false
@@ -129,4 +146,4 @@ This project is customized from the [Mizuki](https://github.com/LyraVoid/Mizuki)
 
 ## License
 
-The project keeps the upstream license setup. See [LICENSE](./LICENSE) and [LICENSE.MIT](./LICENSE.MIT).
+This repository keeps the upstream license files. See [LICENSE](./LICENSE) and [LICENSE.MIT](./LICENSE.MIT) for details.
