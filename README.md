@@ -20,7 +20,7 @@ A soft, content-first personal blog for technical notes, everyday thoughts, pers
 
 ## About this project
 
-Namrood Blog is a customized static site for Namrood's own writing and archive. It is not maintained as a generic blog template; it collects technical notes, learning records, life updates, anime lists, diaries, albums, devices, projects, skills, and timeline pages in one place.
+Namrood Blog is a customized static site for Namrood's own writing and archive. It collects technical notes, learning records, life updates, anime lists, diaries, albums, devices, projects, skills, and timeline pages in one place.
 
 The site is generated with Astro and can be deployed to static hosting platforms such as Vercel, GitHub Pages, Netlify, or Cloudflare Pages. Its design is soft and content-first, with the goal of making writing, reading, and revisiting memories feel calm and simple.
 
