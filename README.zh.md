@@ -1,8 +1,12 @@
+<div align="center">
+
+<img src="logo.png" width="140" alt="Namrood Blog logo">
+
 # Namrood 的个人博客
 
-<img align="right" src="logo.png" width="180px" alt="Namrood Blog logo">
+一个柔和、以内容为中心的个人博客，用来记录技术笔记、日常想法、个人兴趣和长期积累的内容。
 
-这是 Namrood 的个人博客项目，用来记录技术学习、生活片段、兴趣收藏和一些长期慢慢积累的内容。它不是一个通用博客模板仓库，而是一个已经被改造成个人站点的静态博客项目。
+[访问站点](https://nam-rood.online) · [English](./README.md) · [简体中文](./README.zh.md) · [日本語](./README.ja.md) · [繁體中文](./README.tw.md)
 
 [![Node.js >= 22](https://img.shields.io/badge/node.js-%3E%3D22-brightgreen)](https://nodejs.org/)
 [![pnpm 11](https://img.shields.io/badge/pnpm-11-blue)](https://pnpm.io/)
@@ -10,18 +14,23 @@
 [![TypeScript 6](https://img.shields.io/badge/TypeScript-6-blue)](https://www.typescriptlang.org/)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg?logo=apache)](https://opensource.org/licenses/Apache-2.0)
 
-站点地址：[nam-rood.online](https://nam-rood.online)
-
-README 语言：
-[English](./README.md) / [简体中文](./README.zh.md) / [日本語](./README.ja.md) / [繁體中文](./README.tw.md)
-
 ![Namrood Blog Preview](./README.webp)
+
+</div>
 
 ## 项目介绍
 
-这个仓库承载的是一个偏个人向的内容站。博客既保存技术学习笔记，也记录生活中的一些小事，还包含番剧、日记、相册、设备、项目、技能和时间线等页面。
+Namrood Blog 是一个为 Namrood 的个人写作与归档定制的静态站点。它把技术笔记、学习记录、生活更新、番剧列表、日记、相册、设备、项目、技能和时间线页面集中在一个地方。
 
-项目基于 Astro 静态生成，适合部署到 Vercel、GitHub Pages、Netlify、Cloudflare Pages 等静态托管平台。页面风格偏柔和，重点是让内容安静地被展示出来。
+站点基于 Astro 生成，可部署到 Vercel、GitHub Pages、Netlify、Cloudflare Pages 等静态托管平台。整体设计偏柔和、以内容为中心，希望让写作、阅读和回看记忆都保持安静而简单。
+
+## 亮点
+
+- 面向个人写作的长期归档，涵盖随笔、学习笔记、日记、相册和长期记录
+- 静态优先的 Astro 站点，支持 RSS、站点地图、本地搜索和基础 SEO
+- 柔和的视觉风格，专注于平静阅读和记忆保存
+- 使用结构化数据维护番剧、设备、项目、技能和个人时间线页面
+- 提供英文、简体中文、日文和繁体中文 README 文档
 
 ## 主要内容
 
@@ -35,12 +44,12 @@ README 语言：
 
 ## 技术栈
 
-- [Astro](https://astro.build/)：静态站点生成与页面路由
+- [Astro](https://astro.build/)：静态生成与页面路由
 - [Svelte](https://svelte.dev/)：交互组件
 - [Tailwind CSS](https://tailwindcss.com/)：样式系统
 - TypeScript：类型检查与项目维护
 - Pagefind：静态站内搜索
-- Expressive Code：代码块高亮与增强展示
+- Expressive Code：代码块增强展示
 - KaTeX：数学公式渲染
 - Swup：页面切换与过渡体验
 
@@ -50,23 +59,29 @@ README 语言：
 src/content/posts/      博客文章
 src/content/spec/       关于、友链等特殊页面内容
 src/pages/              Astro 页面路由
-src/components/         页面组件与功能组件
+src/components/         布局、功能与小组件
 src/data/               番剧、日记、项目、技能等结构化数据
 public/                 静态资源、图片、字体和脚本
-scripts/                内容同步、文章创建、构建辅助脚本
+scripts/                内容同步、文章创建和构建辅助脚本
 docs/                   项目维护文档
+tests/                  测试文件与验证辅助内容
 ```
 
 ## 本地开发
 
-项目使用 pnpm 管理依赖。
+环境要求：
+
+- Node.js 22 或更新版本
+- pnpm 11
+
+安装依赖并启动本地开发服务器：
 
 ```bash
 pnpm install
 pnpm dev
 ```
 
-开发服务器默认运行在：`http://localhost:4321`
+开发服务器默认运行在 `http://localhost:4321`。
 
 常用命令：
 
@@ -115,9 +130,11 @@ comment: true
 pnpm build
 ```
 
-构建产物会输出到 `dist/`。仓库中已经包含 Vercel 配置和 GitHub Pages 工作流，可根据实际部署平台配置环境变量。
+构建产物会输出到 `dist/`。构建脚本会更新番剧数据，运行 Astro 生产构建，生成 Pagefind 搜索索引，并压缩字体。
 
-如果不使用独立内容仓库，建议在本地或 CI 中显式设置：
+仓库中已经包含 Vercel 配置和 GitHub Pages 工作流，可根据目标托管平台进行调整。
+
+`predev` 和 `prebuild` 脚本会在启动或构建前尝试执行内容同步。如果不使用外部内容仓库，请在本地或 CI 中显式禁用内容同步：
 
 ```bash
 ENABLE_CONTENT_SYNC=false
@@ -125,8 +142,8 @@ ENABLE_CONTENT_SYNC=false
 
 ## 致谢
 
-本项目基于 [Mizuki](https://github.com/LyraVoid/Mizuki) 主题改造而来，感谢原项目提供的设计基础、组件能力和博客功能。当前仓库在此基础上整理为 Namrood 的个人博客项目。
+本项目基于 [Mizuki](https://github.com/LyraVoid/Mizuki) 主题定制而来。感谢原项目提供的设计基础、组件系统和博客功能。当前仓库作为 Namrood 的个人博客项目使用。
 
 ## License
 
-项目保留上游许可证设置，详见 [LICENSE](./LICENSE) 与 [LICENSE.MIT](./LICENSE.MIT)。
+本仓库保留上游许可证文件。详见 [LICENSE](./LICENSE) 与 [LICENSE.MIT](./LICENSE.MIT)。
